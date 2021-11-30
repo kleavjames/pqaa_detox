@@ -30,36 +30,36 @@ const CounterScreen = () => {
 
   return (
     <SafeAreaView style={styles.container} forceInset={{ top: 'always' }}>
-      <View>
+      <View accessibilityLabel='waterCounterLabel' testID='waterCounter'>
         <CounterButton
-          text="Water Counter"
+          text='Water Counter'
           onPress={() => {
             dispatch({ type: 'increase_1', payload });
           }}
           counter={counter_1}
         />
       </View>
-      <View>
+      <View testID='electricityCounter'>
         <CounterButton
-          text="Electricity Counter"
+          text='Electricity Counter'
           onPress={() => {
             dispatch({ type: 'increase_2', payload });
           }}
           counter={counter_2}
         />
       </View>
-      <View>
+      <View testID='gasCounter'>
         <CounterButton
-          text="Gas Counter"
+          text='Gas Counter'
           onPress={() => {
             dispatch({ type: 'increase_3', payload });
           }}
           counter={counter_3}
         />
       </View>
-      <View>
+      <View testID='broadbandCounter'>
         <CounterButton
-          text="Broadband Counter"
+          text='Broadband Counter'
           onPress={() => {
             dispatch({ type: 'increase_4', payload });
           }}
@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     marginLeft: 20,
     marginRight: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 });
 
 export default CounterScreen;
